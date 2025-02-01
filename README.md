@@ -4,6 +4,30 @@
 
 ---
 
+**Features** : 
+- Multi-language support for:
+  - English (en)
+  - Hindi (hi)
+  - Bengali (bn)
+- Rich text editing with CKEditor integration
+- Automatic translation using googletrans library
+- Redis-based caching system
+- RESTful API with language parameter support
+
+
+**Tech Stack**
+- *Core Technologies*
+  - Python 3.9
+  - Django 5.1
+  - Django REST Framework
+  - Redis (for caching)
+
+- *Dependencies*
+  - django-ckeditor (for WYSIWYG editor)
+  - googletrans (for automatic translations)
+
+
+
 ## **Table of Contents**
 - [Installation](#installation)
 - [API Usage Examples](#api-usage-examples)
@@ -17,6 +41,7 @@
 
 Before setting up the project, ensure you have the following installed:
 - **Python 3.11+** (for backend)
+- **Redis Server** 6.0 or higher
 
 ### **Step 1: Clone the Repository**
 
@@ -47,6 +72,11 @@ python manage.py createsuperuser
 4. Start server
 ```
 python manage.py runserver
+```
+
+5. Start Redis server (if not running):
+```
+redis-server
 ```
 
 ## **API Usage Examples**
