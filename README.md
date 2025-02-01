@@ -89,7 +89,7 @@ curl -X GET "http://localhost:8000/faqs/?lang=hi"
 ```
 
 ### **Fetching a Single FAQ**
-**Endpoint** : `GET /faqs/\<int:faq_id\>/`
+**Endpoint** : `GET /faqs/<int:faq_id>/`
 ```
 curl -X GET "http://localhost:8000/faqs/9/?lang=hi"
 ```
@@ -127,7 +127,7 @@ curl -X POST "http://localhost:8000/faqs/" \
 
 
 ### **Updating an Existing FAQ**
-**Endpoint** : `PUT /faqs/\<int:faq_id\>/`
+**Endpoint** : `PUT /faqs/<int:faq_id>/`
 ```
 curl -X PUT "http://localhost:8000/faqs/1/" \
     -H "Content-Type: application/json" \
@@ -145,7 +145,7 @@ curl -X PUT "http://localhost:8000/faqs/1/" \
 
 
 ### **Deleting an FAQ**
-**Endpoint** : `DELETE /faqs/\<int:faq_id\>/`
+**Endpoint** : `DELETE /faqs/<int:faq_id>/`
 ```
 curl -X DELETE "http://localhost:8000/faqs/1/"
 ```
