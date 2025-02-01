@@ -16,10 +16,7 @@
 ### **Prerequisites**
 
 Before setting up the project, ensure you have the following installed:
-- **Python 3.7+** (for backend)
-- **Node.js 12+** (for frontend)
-- **npm or yarn** (for package management)
-- **Docker** (optional, for containerization)
+- **Python 3.11+** (for backend)
 
 ### **Step 1: Clone the Repository**
 
