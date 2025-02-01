@@ -79,6 +79,38 @@ python manage.py runserver
 redis-server
 ```
 
+## **Project Structure** 
+he following structure represents the organization of the Django FAQ API project:
+```
+faq_project/
+│── faq_project/          # Main Django project directory
+│   │── __init__.py 
+│   │── asgi.py           
+│   │── settings.py       # Django settings file
+│   │── urls.py           # Root URL configurations
+│   │── wsgi.py           
+│
+│── faq/                  # Django app for FAQs
+│   │── tests/            # Unit tests for the app
+|       │──__init__.py
+        │──test_models.py
+        │──test_views.py
+
+│── │── __init__.py       
+│   │── admin.py          # Django admin panel configurations
+│   │── models.py         # Database models
+│   │── serializers.py    
+│   │── urls.py           # App-level URL routing
+│   │── views.py          # API views (business logic)
+│
+│── .flake8               # Linter configuration for PEP8 compliance
+│── .gitignore           
+│── db.sqlite3           
+│── manage.py             # Django CLI management script
+│── README.md             # Project documentation
+│── requirements.txt      # Dependencies for the project
+
+```
 ## **API Usage Examples**
 ### **Fetching All FAQs**
 **Endpoint** : `GET /faqs/`    
@@ -90,7 +122,7 @@ redis-server
 curl -X GET "http://localhost:8000/faqs/?lang=hi"
 ```
 **Response:**
-```
+```json
 [
     {
     "id": 4,
@@ -121,7 +153,7 @@ curl -X GET "http://localhost:8000/faqs/?lang=hi"
 curl -X GET "http://localhost:8000/faqs/9/?lang=hi"
 ```
 **Response:**
-```
+```json
 {
   "id": 9,
   "question": "दुनिया का सबसे बड़ा एनीमे?",
@@ -139,7 +171,7 @@ curl -X POST "http://localhost:8000/faqs/" \
 
 ```
 **Response:**
-```
+```json
 {
   "id": 10,
   "question": "What is Django?",
@@ -162,7 +194,7 @@ curl -X PUT "http://localhost:8000/faqs/1/" \
 
 ```
 **Response:**
-```
+```json
 {
     "id": 1,
     "question": "What does this app do?",
@@ -177,7 +209,7 @@ curl -X PUT "http://localhost:8000/faqs/1/" \
 curl -X DELETE "http://localhost:8000/faqs/1/"
 ```
 **Response:**
-```
+```json
 {
     "message": "FAQ deleted successfully."
 }
