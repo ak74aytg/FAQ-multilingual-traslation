@@ -56,6 +56,9 @@ python manage.py runserver
 ### **Fetching All FAQs**
 **Endpoint** : `GET /faqs/`    
                `GET /faqs/?lang=<la>`
+
+
+**only supported language are : English(en), Hindi(hi), Bangla(bn)**
 ```
 curl -X GET "http://localhost:8000/faqs/?lang=hi"
 ```
